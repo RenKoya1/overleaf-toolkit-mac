@@ -1,6 +1,6 @@
 # Overleaf Toolkit
 
-This repository fixes the error in bin/init.
+This repository fixes this error in bin/up and bin/start.
 
 ```
 ---------------------  ERROR  -----------------------
