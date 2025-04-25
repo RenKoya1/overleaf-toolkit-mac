@@ -1,5 +1,17 @@
 # Overleaf Toolkit
 
+This repository fixes the error in bin/init.
+
+```
+---------------------  ERROR  -----------------------
+  Invalid MONGO_VERSION: MONGO_VERSION=6.0
+
+  MONGO_VERSION must start with the actual major version of mongo, followed by a dot.
+  Example: MONGO_IMAGE=my.dockerhub.com/custom-mongo
+           MONGO_VERSION=6.0-custom
+---------------------  ERROR  -----------------------
+
+```
 This repository contains the Overleaf Toolkit, the standard tools for running a local
 instance of [Overleaf](https://overleaf.com). This toolkit will help you to set up and administer both Overleaf Community Edition (free to use, and community supported), and Overleaf Server Pro (commercial, with professional support).
 
