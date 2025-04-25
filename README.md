@@ -35,3 +35,4 @@ Users of Server Pro should contact `support@overleaf.com` for assistance.
 
 In both cases, it is a good idea to include the output of the `bin/doctor` script in your message.
 
+# overleaf-toolkit-mac
