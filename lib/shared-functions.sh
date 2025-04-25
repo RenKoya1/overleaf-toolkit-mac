@@ -23,7 +23,7 @@ function read_image_version() {
   IMAGE_VERSION_MINOR=${BASH_REMATCH[2]}
   IMAGE_VERSION_PATCH=${BASH_REMATCH[3]}
 }
-
+docker --version
 function read_mongo_version() {
   local mongo_image=$(read_configuration "MONGO_IMAGE")
   local mongo_version=$(read_configuration "MONGO_VERSION")
@@ -217,11 +217,11 @@ function check_sharelatex_env_vars() {
 function read_variable() {
   local name=$1
   grep -E "^$name=" "$TOOLKIT_ROOT/config/variables.env" \
-  | sed -r "s/^$name=([\"']?)(.+)\1\$/\2/"
+  | sed -r "s/^$name=[\"']?([^\"']+)[\"']?\$/\1/"
 }
 
 function read_configuration() {
   local name=$1
   grep -E "^$name=" "$TOOLKIT_ROOT/config/overleaf.rc" \
-  | sed -r "s/^$name=([\"']?)(.+)\1\$/\2/"
+  | sed -r "s/^$name=[\"']?([^\"']+)[\"']?\$/\1/"
 }
